@@ -15,6 +15,7 @@ The controller handles and responds to user input and interaction. For example, 
 - Routing pattern `/[Controller]/[ActionName]`
 - Model binding and `MapControllerRoute`
 - Input sanitization using `HtmlEncoder.Default.Encode`
+
 ### Part 3: [Views](https://learn.microsoft.com/en-us/aspnet/core/tutorials/first-mvc-app/adding-view?source=recommendations)
 1. Add a view (Razor)
    - Action methods
@@ -29,6 +30,7 @@ The controller handles and responds to user input and interaction. For example, 
 1. Passing Data from the Controller to the View
 
 ### Part 4: [Models](https://learn.microsoft.com/en-us/aspnet/core/tutorials/first-mvc-app/adding-model?source=recommendations)
+The second half of this page does a good job tying together pattern concepts.  
 1. Add a data model class
    - Entity-Framework Core
    - Data structure via POCO _(Plain Old CLR Objects)_ classes
@@ -45,8 +47,228 @@ The controller handles and responds to user input and interaction. For example, 
    - Routing pattern `/[Controller]/[ActionName]/[Parameters]`
 1. Dependency injection in the controller
    - Kids have it so easy these days
+   - #MARK Dependency injection ... is used in this constructor
+   - Management of connection string
+     - #MARK See http://go.microsoft.com/fwlink/?LinkId=723263 for guidance on storing connection strings.
 1. Strongly typed models and the @model directive
-1. Additional resources
-   
-### Part 5: [Data](https://learn.microsoft.com/en-us/aspnet/core/tutorials/first-mvc-app/working-with-sql?source=recommendations)
+   - #MARK MVC 5 feature: ViewData dictionary is a dynamic object...
 
+### Part 5: [SQL](https://learn.microsoft.com/en-us/aspnet/core/tutorials/first-mvc-app/working-with-sql?source=recommendations)
+1. _SQL Server Express LocalDB_
+   - Using the Sql Server Obj eXplorer pane 
+   - View/Edit tables using View Designer from SSOX
+   - View/Edit Data using View Data from SSOX 
+1. Seed the database
+   
+### Part 6: [Controllers, cont'd](https://learn.microsoft.com/en-us/aspnet/core/tutorials/first-mvc-app/controller-methods-views?view=aspnetcore-8.0)   
+This page pulls together many pattern concepts.  
+- `GET` and `POST` methods compared 
+- Generated HTML 
+1. Processing the `POST` Request
+   - ASP.NET Core feature: Tag helpers
+   - [Bind] ... useful against over-posting.
+
+### Part 7: [Search functionality](https://learn.microsoft.com/en-us/aspnet/core/tutorials/first-mvc-app/search?view=aspnetcore-8.0)
+
+### Part 8: [Add a field](https://learn.microsoft.com/en-us/aspnet/core/tutorials/first-mvc-app/new-field?view=aspnetcore-8.0&tabs=visual-studio)
+
+### Part 9: [Validation](https://learn.microsoft.com/en-us/aspnet/core/tutorials/first-mvc-app/validation?view=aspnetcore-8.0)
+
+### Part 10: [Examine `Details` and `Delete` methods](https://learn.microsoft.com/en-us/aspnet/core/tutorials/first-mvc-app/details?view=aspnetcore-8.0)
+
+## Directory structure
+
+```
+Folder PATH listing
+Volume serial number is AA35-206F
+C:.
+|   .gitattributes
+|   .gitignore
+|   MvcMovie.sln
+|   MvcMovies_tree_build.txt
+|   README.md
+|   
++---.github
+|   \---workflows
+\---MvcMovie
+    |   appsettings.Development.json
+    |   appsettings.json
+    |   MvcMovie.csproj
+    |   MvcMovie.csproj.user
+    |   Program.cs
+    |   
+    +---bin
+    |   \---Debug
+    |       \---net8.0
+    |           |   appsettings.Development.json
+    |           |   appsettings.json
+    |           |   
+    |           |   drivers ... 220+ .dll files
+    |                   
+    +---Controllers
+    |       HelloWorldController.cs
+    |       HomeController.cs
+    |       MoviesController.cs
+    |       
+    +---Data
+    |       MvcMovieContext.cs
+    |       
+    +---Migrations
+    |       20240701174435_InitialCreate.cs
+    |       20240701174435_InitialCreate.Designer.cs
+    |       MvcMovieContextModelSnapshot.cs
+    |       
+    +---Models
+    |       Class.cs
+    |       ErrorViewModel.cs
+    |       Movie.cs
+    |       
+    +---obj
+    |   |   MvcMovie.csproj.nuget.dgspec.json
+    |   |   MvcMovie.csproj.nuget.g.props
+    |   |   MvcMovie.csproj.nuget.g.targets
+    |   |   project.assets.json
+    |   |   project.nuget.cache
+    |   |   
+    |   \---Debug
+    |       \---net8.0
+    |           |   .NETCoreApp,Version=v8.0.AssemblyAttributes.cs
+    |           |   apphost.exe
+    |           |   MvcMovie.AssemblyInfo.cs
+    |           |   MvcMovie.AssemblyInfoInputs.cache
+    |           |   MvcMovie.assets.cache
+    |           |   MvcMovie.csproj.AssemblyReference.cache
+    |           |   MvcMovie.csproj.BuildWithSkipAnalyzers
+    |           |   MvcMovie.csproj.CoreCompileInputs.cache
+    |           |   MvcMovie.csproj.FileListAbsolute.txt
+    |           |   MvcMovie.csproj.Up2Date
+    |           |   MvcMovie.dll
+    |           |   MvcMovie.GeneratedMSBuildEditorConfig.editorconfig
+    |           |   MvcMovie.genruntimeconfig.cache
+    |           |   MvcMovie.GlobalUsings.g.cs
+    |           |   MvcMovie.MvcApplicationPartsAssemblyInfo.cache
+    |           |   MvcMovie.pdb
+    |           |   MvcMovie.RazorAssemblyInfo.cache
+    |           |   MvcMovie.RazorAssemblyInfo.cs
+    |           |   MvcMovie.sourcelink.json
+    |           |   project.razor.vs.bin
+    |           |   staticwebassets.build.json
+    |           |   staticwebassets.development.json
+    |           |   staticwebassets.pack.json
+    |           |   
+    |           +---ref
+    |           |       MvcMovie.dll
+    |           |       
+    |           +---refint
+    |           |       MvcMovie.dll
+    |           |       
+    |           +---scopedcss
+    |           |   +---bundle
+    |           |   |       MvcMovie.styles.css
+    |           |   |       
+    |           |   +---projectbundle
+    |           |   |       MvcMovie.bundle.scp.css
+    |           |   |       
+    |           |   \---Views
+    |           |       \---Shared
+    |           |               _Layout.cshtml.rz.scp.css
+    |           |               
+    |           \---staticwebassets
+    |                   msbuild.build.MvcMovie.props
+    |                   msbuild.buildMultiTargeting.MvcMovie.props
+    |                   msbuild.buildTransitive.MvcMovie.props
+    |                   msbuild.MvcMovie.Microsoft.AspNetCore.StaticWebAssets.props
+    |                   
+    +---Properties
+    |       launchSettings.json
+    |       serviceDependencies.json
+    |       serviceDependencies.local.json
+    |       serviceDependencies.local.json.user
+    |       
+    +---Views
+    |   |   _ViewImports.cshtml
+    |   |   _ViewStart.cshtml
+    |   |   
+    |   +---HelloWorld
+    |   |       Index.cshtml
+    |   |       Welcome.cshtml
+    |   |       
+    |   +---Home
+    |   |       Index.cshtml
+    |   |       Privacy.cshtml
+    |   |       
+    |   +---Movies
+    |   |       Create.cshtml
+    |   |       Delete.cshtml
+    |   |       Details.cshtml
+    |   |       Edit.cshtml
+    |   |       Index.cshtml
+    |   |       
+    |   \---Shared
+    |           Error.cshtml
+    |           _Layout.cshtml
+    |           _Layout.cshtml.css
+    |           _ValidationScriptsPartial.cshtml
+    |           
+    \---wwwroot
+        |   favicon.ico
+        |   
+        +---css
+        |       site.css
+        |       
+        +---js
+        |       site.js
+        |       
+        \---lib
+            +---bootstrap
+            |   |   LICENSE
+            |   |   
+            |   \---dist
+            |       +---css
+            |       |
+            |       |                            | x | .rtl.min.css
+            |       |       bootstrap            | x | .rtl.css.map
+            |       |       bootstrap-grid       | x | .rtl.css
+            |       |       bootstrap-reboot     | x | .min.css.map
+            |       |       bootstrap-utilities  | x | .min.css
+            |       |                            | x | .css.map
+            |       |                            | x | .css   
+            |       |       
+            |       |       
+            |       \---js
+            |               bootstrap            | x | 
+            |               bootstrap.min        | x | 
+            |               bootstrap.esm        | x | 
+            |               bootstrap.esm.min    | x | 
+            |               bootstrap.bundle     | x | 
+            |               bootstrap.bundle.min | x | .js
+            |               bootstrap            | x | .js.map
+            |               bootstrap.min        | x | 
+            |               bootstrap.esm        | x | 
+            |               bootstrap.esm.min    | x | 
+            |               bootstrap.bundle     | x | 
+            |               bootstrap.bundle.min | x | 
+            |               
+            +---jquery
+            |   |   LICENSE.txt
+            |   |   
+            |   \---dist
+            |           jquery.js
+            |           jquery.min.js
+            |           jquery.min.map
+            |           
+            +---jquery-validation
+            |   |   LICENSE.md
+            |   |   
+            |   \---dist
+            |           additional-methods.js
+            |           additional-methods.min.js
+            |           jquery.validate.js
+            |           jquery.validate.min.js
+            |           
+            \---jquery-validation-unobtrusive
+                    jquery.validate.unobtrusive.js
+                    jquery.validate.unobtrusive.min.js
+                    LICENSE.txt                    
+```
+					
