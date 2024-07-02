@@ -1,22 +1,22 @@
 ## ASP.NET Tutorial from Microsoft
 Use __MVC 5__ and __.NET 8__ to put together a Model-View-Controller framework in __C#__.
 
-### Part 1: [First app](https://learn.microsoft.com/en-us/aspnet/core/tutorials/first-mvc-app/start-mvc?view=aspnetcore-8.0&source=recommendations&tabs=visual-studio)<\u>
+### Part 1: [First app](https://learn.microsoft.com/en-us/aspnet/core/tutorials/first-mvc-app/start-mvc?view=aspnetcore-8.0&source=recommendations&tabs=visual-studio)</u>
 1. Prereqs
-   - Localhost (IIS)<\u>
+   - Localhost (IIS)</u>
    - Visual Studio 2022
    - NET 8.0
 1. Create a working basic app
 1. Enjoy an out-of-box experience
 
-### Part 2: [Controllers](https://learn.microsoft.com/en-us/aspnet/core/tutorials/first-mvc-app/adding-controller?view=aspnetcore-8.0)<\u>
+### Part 2: [Controllers](https://learn.microsoft.com/en-us/aspnet/core/tutorials/first-mvc-app/adding-controller?view=aspnetcore-8.0)</u>
 - HTTP `GET`
 - Routing pattern `/[Controller]/[ActionName]`
 - Model binding and `MapControllerRoute`
 - Input sanitization using `HtmlEncoder.Default.Encode`
 
-### Part 3: [Views](https://learn.microsoft.com/en-us/aspnet/core/tutorials/first-mvc-app/adding-view?source=recommendations)<\u>
-1. Add a view (Razor)<\u>
+### Part 3: [Views](https://learn.microsoft.com/en-us/aspnet/core/tutorials/first-mvc-app/adding-view?source=recommendations)</u>
+1. Add a view (Razor)</u>
    - HTTP `POST`
    - Action methods
    - `IActionResult` Interface
@@ -28,7 +28,7 @@ Use __MVC 5__ and __.NET 8__ to put together a Model-View-Controller framework i
 1. Change the title, footer, and menu link in the layout file
 1. Passing Data from the Controller to the View
 
-### Part 4: [Models](https://learn.microsoft.com/en-us/aspnet/core/tutorials/first-mvc-app/adding-model?source=recommendations)<\u>
+### Part 4: [Models](https://learn.microsoft.com/en-us/aspnet/core/tutorials/first-mvc-app/adding-model?source=recommendations)</u>
 The second half of this page does a good job tying together pattern concepts.  
 1. Add a data model class
    - Entity-Framework Core
@@ -52,7 +52,7 @@ The second half of this page does a good job tying together pattern concepts.
 1. Strongly typed models and the `@model` directive
    - `#MARK` MVC 5 feature: `ViewData` dictionary is a dynamic object...
 
-### Part 5: [SQL](https://learn.microsoft.com/en-us/aspnet/core/tutorials/first-mvc-app/working-with-sql?source=recommendations)<\u>
+### Part 5: [SQL](https://learn.microsoft.com/en-us/aspnet/core/tutorials/first-mvc-app/working-with-sql?source=recommendations)</u>
 1. _SQL Server Express LocalDB_
    - Using the _SQL Server Obj eXplorer pane_
    - View/Edit tables using View Designer from SSOX
@@ -67,13 +67,13 @@ This page pulls together many pattern concepts.
    - ASP.NET Core feature: Tag helpers
    - [Bind] ... useful against over-posting.
 
-### Part 7: [Search functionality](https://learn.microsoft.com/en-us/aspnet/core/tutorials/first-mvc-app/search?view=aspnetcore-8.0)<\u>
+### Part 7: [Search functionality](https://learn.microsoft.com/en-us/aspnet/core/tutorials/first-mvc-app/search?view=aspnetcore-8.0)</u>
 
-### Part 8: [Add a field](https://learn.microsoft.com/en-us/aspnet/core/tutorials/first-mvc-app/new-field?view=aspnetcore-8.0&tabs=visual-studio)<\u>
+### Part 8: [Add a field](https://learn.microsoft.com/en-us/aspnet/core/tutorials/first-mvc-app/new-field?view=aspnetcore-8.0&tabs=visual-studio)</u>
 
-### Part 9: [Validation](https://learn.microsoft.com/en-us/aspnet/core/tutorials/first-mvc-app/validation?view=aspnetcore-8.0)<\u>
+### Part 9: [Validation](https://learn.microsoft.com/en-us/aspnet/core/tutorials/first-mvc-app/validation?view=aspnetcore-8.0)</u>
 
-### Part 10: [Examine `Details` and `Delete` methods](https://learn.microsoft.com/en-us/aspnet/core/tutorials/first-mvc-app/details?view=aspnetcore-8.0)<\u>
+### Part 10: [Examine `Details` and `Delete` methods](https://learn.microsoft.com/en-us/aspnet/core/tutorials/first-mvc-app/details?view=aspnetcore-8.0)</u>
 ---
 ## Directory structure
 
