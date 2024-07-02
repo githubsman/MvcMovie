@@ -3,7 +3,7 @@ Use __MVC 5__ and __.NET 8__ to put together a Model-View-Controller framework i
 
 ### Part 1: [First app](https://learn.microsoft.com/en-us/aspnet/core/tutorials/first-mvc-app/start-mvc?view=aspnetcore-8.0&source=recommendations&tabs=visual-studio)</u>
 1. Prereqs
-   - Localhost (IIS)</u>
+   - Localhost (IIS)
    - Visual Studio 2022
    - NET 8.0
 1. Create a working basic app
@@ -16,7 +16,7 @@ Use __MVC 5__ and __.NET 8__ to put together a Model-View-Controller framework i
 - Input sanitization using `HtmlEncoder.Default.Encode`
 
 ### Part 3: [Views](https://learn.microsoft.com/en-us/aspnet/core/tutorials/first-mvc-app/adding-view?source=recommendations)</u>
-1. Add a view (Razor)</u>
+1. Add a view (Razor)
    - HTTP `POST`
    - Action methods
    - `IActionResult` Interface
@@ -59,7 +59,7 @@ The second half of this page does a good job tying together pattern concepts.
    - View/Edit Data using View Data from SSOX 
 1. Seeding the database
    
-### Part 6: [Controllers, cont'd](https://learn.microsoft.com/en-us/aspnet/core/tutorials/first-mvc-app/controller-methods-views?view=aspnetcore-8.0)   
+### Part 6: [Controllers, cont'd](https://learn.microsoft.com/en-us/aspnet/core/tutorials/first-mvc-app/controller-methods-views?view=aspnetcore-8.0)</u>  
 This page pulls together many pattern concepts.  
 - `GET` and `POST` methods compared 
 - Generated HTML 
