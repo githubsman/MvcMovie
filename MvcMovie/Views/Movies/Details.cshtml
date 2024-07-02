@@ -1,10 +1,15 @@
-﻿@model MvcMovie.Models.Movie
+﻿@*  #MARK The Model object is strongly typed.  *@
+@model MvcMovie.Models.Movie
+
+@* #MARK MVC 5 feature: ViewData dictionary is a dynamic object that provides a convenient late-bound way to pass information to a view.
+        https://learn.microsoft.com/en-us/aspnet/core/tutorials/first-mvc-app/adding-model?view=aspnetcore-8.0&tabs=visual-studio#strongly-typed-models-and-the-model-directive *@
 
 @{
     ViewData["Title"] = "Details";
 }
 
 <h1>Details</h1>
+
 
 <div>
     <h4>Movie</h4>

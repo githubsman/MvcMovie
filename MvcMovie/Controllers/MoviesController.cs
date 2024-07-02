@@ -10,6 +10,8 @@ using MvcMovie.Models;
 
 namespace MvcMovie.Controllers
 {
+    // #MARK Dependency injection
+    // #MARK   is used in this constructor
     public class MoviesController : Controller
     {
         private readonly MvcMovieContext _context;
@@ -26,6 +28,8 @@ namespace MvcMovie.Controllers
         }
 
         // GET: Movies/Details/5
+        //      movies/details?id=5    Alternative; #MARK this is termed a query string
+        //                             In Program.cs, see app.MapControllerRoute{}
         public async Task<IActionResult> Details(int? id)
         {
             if (id == null)
@@ -70,7 +74,7 @@ namespace MvcMovie.Controllers
         {
             if (id == null)
             {
-                return NotFound();
+                return NotFound();    // HTTP 404 error
             }
 
             var movie = await _context.Movie.FindAsync(id);
@@ -84,7 +88,7 @@ namespace MvcMovie.Controllers
         // POST: Movies/Edit/5
         // To protect from overposting attacks, enable the specific properties you want to bind to.
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
-        [HttpPost]
+        [HttpPost]  // this will only respond to a POST request; [HttpGet] is the default
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Edit(int id, [Bind("Id,Title,ReleaseDate,Genre,Price")] Movie movie)
         {
