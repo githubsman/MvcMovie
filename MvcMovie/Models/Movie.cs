@@ -11,13 +11,13 @@ public class Movie
     
     public string? Title { get; set; }
     
-    [DataType(DataType.Date)]
+    [DataType(DataType.Date)]   //  specifies the data type as (Date); prevents time from displaying
     [Display(Name = "Release Date")]
     public DateTime ReleaseDate { get; set; }
     
     public string? Genre { get; set; }
 
-    [Column(TypeName = "decimal(18, 2)")] //currency
+    [Column(TypeName = "decimal(18, 2)")]   //currency
     public decimal Price { get; set; }
 
 }

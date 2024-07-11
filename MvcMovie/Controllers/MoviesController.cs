@@ -2,11 +2,15 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Humanizer;
+using Microsoft.AspNetCore.Http.HttpResults;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using MvcMovie.Data;
 using MvcMovie.Models;
+using Newtonsoft.Json.Linq;
+using static Microsoft.EntityFrameworkCore.DbLoggerCategory;
 
 namespace MvcMovie.Controllers
 {
@@ -22,9 +26,45 @@ namespace MvcMovie.Controllers
         }
 
         // GET: Movies
-        public async Task<IActionResult> Index()
+        public async Task<IActionResult> Index(string movieGenre, string searchString)
         {
-            return View(await _context.Movie.ToListAsync());
+            if (_context.Movie == null)
+            {
+                return Problem("Entity set 'MvcMovieContext.Movie'  is null.");
+            }
+
+            // Use LINQ to get list of genres.
+            IQueryable<string> genreQuery = from m in _context.Movie
+                                orderby m.Genre
+                                select m.Genre;
+
+            var movies = from m in _context.Movie   // definition for a LINQ query
+                         select m;
+
+            if (!String.IsNullOrEmpty(searchString))
+            {
+                movies = movies.Where(s => s.Title!.Contains(searchString));
+            }
+
+            if (!string.IsNullOrEmpty(movieGenre))
+            {
+                movies = movies.Where(x => x.Genre == movieGenre);
+            }
+
+            var movieGenreVM = new MovieGenreViewModel
+            {
+                Genres = new SelectList(await genreQuery.Distinct().ToListAsync()),
+                Movies = await movies.ToListAsync()
+            };
+
+            return View(movieGenreVM);
+        }
+
+        [HttpPost]
+        public string Index(string searchString, bool notUsed)
+        {
+            // minimal test of filter using POST
+            return "From [HttpPost]Index: filter on " + searchString;
         }
 
         // GET: Movies/Details/5

@@ -63,11 +63,20 @@ The second half of this page does a good job tying together pattern concepts.
 This page pulls together many pattern concepts.  
 - `GET` and `POST` methods compared 
 - Generated HTML 
+- ASP.NET Core feature: Tag helpers
+- [Bind] ... effective against over-posting
+- Preventing request forgeries: `ValidateAntiForgeryToken`
+- Scaffolding and views
 1. Processing the `POST` Request
-   - ASP.NET Core feature: Tag helpers
-   - [Bind] ... useful against over-posting.
+- Client-side data validation
 
 ### Part 7: [Search functionality](https://learn.microsoft.com/en-us/aspnet/core/tutorials/first-mvc-app/search?view=aspnetcore-8.0)</u>
+1. Add Search by genre
+- `LINQ` query
+- `.Contains(searchString)`
+- Minimal user input form (`GET`)
+1. Add search by genre to the Index view
+- _Evaluation_ VS _Inspection_
 
 ### Part 8: [Add a field](https://learn.microsoft.com/en-us/aspnet/core/tutorials/first-mvc-app/new-field?view=aspnetcore-8.0&tabs=visual-studio)</u>
 
