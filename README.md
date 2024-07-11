@@ -63,7 +63,7 @@ The second half of this page does a good job tying together pattern concepts.
 This page pulls together many pattern concepts.  
 - `GET` and `POST` methods compared 
 - Generated HTML 
-- ASP.NET Core feature: Tag helpers
+- Tag helpers (meaning, HTML tag)
 - [Bind] ... effective against over-posting
 - Preventing request forgeries: `ValidateAntiForgeryToken`
 - Scaffolding and views
@@ -79,8 +79,32 @@ This page pulls together many pattern concepts.
 - _Evaluation_ VS _Inspection_
 
 ### Part 8: [Add a field](https://learn.microsoft.com/en-us/aspnet/core/tutorials/first-mvc-app/new-field?view=aspnetcore-8.0&tabs=visual-studio)</u>
+1. Add a Rating Property to the Movie Model
+- Three approaches to data schema changes:
+    - Drop the database and recreate it with seed data
+    - Explicitly modify the schema
+	    - manually (so they call it) 
+		- using a database change script
+    - Use _Code First Migrations_
 
 ### Part 9: [Validation](https://learn.microsoft.com/en-us/aspnet/core/tutorials/first-mvc-app/validation?view=aspnetcore-8.0)</u>
+- Keeping things DRY
+    - rules established at the model layer
+    - data-entry validation provided for both record creation and editing
+- Delete the previously edited data
+    - the app pulls from the seed data on next launch
+1. Add validation rules to the movie model
+- using `DataAnnotations` namespace
+    - `DataType`
+	- `DisplayFormat`
+	- `Required`
+1. How validation works (jQuery)
+- `ModelState.IsValid`
+- Server- and client-side (redundant)  operations
+    - testing on server-side only
+1. More about DataType Attributes
+- `Range`
+- Regular expressions for validation
 
 ### Part 10: [Examine `Details` and `Delete` methods](https://learn.microsoft.com/en-us/aspnet/core/tutorials/first-mvc-app/details?view=aspnetcore-8.0)</u>
 ---

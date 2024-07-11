@@ -20,34 +20,11 @@ public static class SeedData
                 return;   // DB has been seeded
             }
             context.Movie.AddRange(
-                new Movie
-                {
-                    Title = "When Harry Met Sally",
-                    ReleaseDate = DateTime.Parse("1989-2-12"),
-                    Genre = "Romantic Comedy",
-                    Price = 7.99M
-                },
-                new Movie
-                {
-                    Title = "Ghostbusters ",
-                    ReleaseDate = DateTime.Parse("1984-3-13"),
-                    Genre = "Comedy",
-                    Price = 8.99M
-                },
-                new Movie
-                {
-                    Title = "Ghostbusters 2",
-                    ReleaseDate = DateTime.Parse("1986-2-23"),
-                    Genre = "Comedy",
-                    Price = 9.99M
-                },
-                new Movie
-                {
-                    Title = "Rio Bravo",
-                    ReleaseDate = DateTime.Parse("1959-4-15"),
-                    Genre = "Western",
-                    Price = 3.99M
-                }
+                    new Movie { Title = "Local Hero", ReleaseDate = DateTime.Parse("1985-2-12"), Genre = "Comedy", Rating = "PG-13", Price = 7.99M },
+                    new Movie { Title = "Twelve Chairs, The", ReleaseDate = DateTime.Parse("1974-2-12"), Genre = "Comedy", Rating = "PG", Price = 5.80M },
+                    new Movie { Title = "Seven Samurai, The", ReleaseDate = DateTime.Parse("1974-2-12"), Genre = "Drama", Rating = "PG-13", Price = 9.99M },
+                    new Movie { Title = "Notorious", ReleaseDate = DateTime.Parse("1967-2-12"), Genre = "Drama", Rating = "PG", Price = 5.00M },
+                    new Movie { Title = "Big Fish", ReleaseDate = DateTime.Parse("2018-2-12"), Genre = "Comedy", Rating = "PG", Price = 6.99M }
             );
             context.SaveChanges();
         }
