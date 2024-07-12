@@ -107,7 +107,13 @@ This page pulls together many pattern concepts.
 - Regular expressions for validation
 
 ### Part 10: [Examine `Details` and `Delete` methods](https://learn.microsoft.com/en-us/aspnet/core/tutorials/first-mvc-app/details?view=aspnetcore-8.0)</u>
----
+- `FirstOrDefaultAsync`
+- For staged usage of a URL (two methods with same name and signature), how to satisfy CLR requirements:
+    1. add differing `ActionName` parameters, or...
+	1. add a contrived `notUsed` parameter to one. 
+
+--
+
 ## Directory structure
 
 ```
